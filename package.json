@@ -1,0 +1,30 @@
+{
+  "name": "pinterest-mcp",
+  "version": "0.1.0",
+  "description": "Pinterest search without login. MCP server, CLI and TypeScript library.",
+  "type": "module",
+  "private": true,
+  "engines": {
+    "node": ">=22.18"
+  },
+  "bin": {
+    "pinterest-mcp": "src/server.ts",
+    "pinterest": "src/cli.ts"
+  },
+  "exports": "./src/pinterest.ts",
+  "scripts": {
+    "start": "node src/server.ts",
+    "cli": "node src/cli.ts",
+    "typecheck": "tsc --noEmit",
+    "test": "node --test test/unit.test.ts test/client.test.ts test/images.test.ts test/mcp.test.ts test/concurrency.test.ts",
+    "test:live": "node --test test/live.test.ts"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.2",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "typescript": "^7.0.2"
+  }
+}
