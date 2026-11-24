@@ -1,5 +1,3 @@
-<img src="assets/icon.svg" width="64" height="64" alt="">
-
 # pinterest
 
 Search Pinterest without an account, cookies, API key or browser. Uses the website's JSON endpoints
